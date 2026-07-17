@@ -1,0 +1,239 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    height:100vh;
+    background:
+    radial-gradient(circle,#ff4757,#111);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:Arial;
+
+    overflow:hidden;
+}
+
+
+
+.container{
+
+    text-align:center;
+    color:white;
+
+}
+
+
+
+h1{
+
+    margin-bottom:40px;
+
+}
+
+
+
+.pokeball{
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    position:relative;
+
+    cursor:pointer;
+
+    margin:auto;
+
+    animation:float 2s infinite;
+
+}
+
+
+
+.top{
+
+    position:absolute;
+
+    width:100%;
+    height:50%;
+
+    background:#e60012;
+
+    border-radius:
+    110px 110px 0 0;
+
+}
+
+
+
+.bottom{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+    height:50%;
+
+    background:white;
+
+    border-radius:
+    0 0 110px 110px;
+
+}
+
+
+
+.line{
+
+    position:absolute;
+
+    top:105px;
+
+    width:100%;
+    height:10px;
+
+    background:black;
+
+    z-index:2;
+
+}
+
+
+
+.button{
+
+    position:absolute;
+
+    top:80px;
+    left:80px;
+
+    width:60px;
+    height:60px;
+
+    background:white;
+
+    border:10px solid black;
+
+    border-radius:50%;
+
+    z-index:3;
+
+}
+
+
+
+.message{
+
+    display:none;
+
+    background:white;
+
+    color:#333;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    margin-top:30px;
+
+    box-shadow:
+    0 0 30px pink;
+
+}
+
+
+
+.photos{
+
+    display:none;
+
+    margin-top:30px;
+
+}
+
+
+
+.photos img{
+
+    width:150px;
+    height:150px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin:10px;
+
+    animation:show 1s;
+
+}
+
+
+
+.open{
+
+    animation:
+    throw 1s forwards;
+
+}
+
+
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+
+
+@keyframes throw{
+
+0%{
+transform:translateY(0) rotate(0);
+}
+
+50%{
+transform:translateY(-200px) rotate(360deg);
+}
+
+100%{
+transform:scale(1.5);
+}
+
+}
+
+
+
+@keyframes show{
+
+from{
+
+opacity:0;
+transform:scale(0);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
