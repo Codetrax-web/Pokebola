@@ -1,31 +1,27 @@
 *{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-
 
 
 body{
 
-height:100vh;
+    width:100%;
+    height:100vh;
 
-display:flex;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-justify-content:center;
+    background:
+    radial-gradient(circle,#ff4b6e,#130008);
 
-align-items:center;
+    font-family:Arial, sans-serif;
 
+    overflow:hidden;
 
-background:
-radial-gradient(circle,#ff5364,#190008);
-
-
-font-family:Arial,sans-serif;
-
-overflow:hidden;
+    color:white;
 
 }
 
@@ -33,11 +29,7 @@ overflow:hidden;
 
 .container{
 
-text-align:center;
-
-color:white;
-
-width:100%;
+    text-align:center;
 
 }
 
@@ -45,35 +37,37 @@ width:100%;
 
 h1{
 
-font-size:35px;
+    font-size:35px;
 
-margin-bottom:20px;
+    margin-bottom:10px;
+
+}
+
+
+
+.subtitle{
+
+    font-size:18px;
+
+    margin-bottom:30px;
 
 }
 
 
 
-.instruction{
-
-font-size:20px;
-
-margin-bottom:30px;
-
-}
-
-
+/* POKEBOLA */
 
 .pokeball{
 
-width:260px;
+    width:280px;
 
-height:260px;
+    height:280px;
 
-margin:auto;
+    position:relative;
 
-position:relative;
+    margin:auto;
 
-cursor:pointer;
+    cursor:pointer;
 
 }
 
@@ -81,33 +75,29 @@ cursor:pointer;
 
 /* PARTE ROJA */
 
-.poke-top{
+.top{
 
-position:absolute;
+    position:absolute;
 
-top:0;
+    top:0;
+    left:0;
 
-left:0;
+    width:100%;
+    height:50%;
 
-width:100%;
+    background:#e60012;
 
-height:50%;
+    border-radius:
+    140px 140px 0 0;
 
+    z-index:5;
 
-background:#e60012;
+    transition:1s;
 
+    transform-origin:bottom;
 
-border-radius:
-130px 130px 0 0;
-
-
-z-index:3;
-
-
-transition:1s;
-
-
-transform-origin:bottom;
+    box-shadow:
+    inset 0 -10px 20px #990000;
 
 }
 
@@ -116,216 +106,185 @@ transform-origin:bottom;
 /* PARTE BLANCA */
 
 
-.poke-bottom{
+.bottom{
 
-position:absolute;
+    position:absolute;
 
-bottom:0;
+    bottom:0;
+    left:0;
 
-left:0;
+    width:100%;
+    height:50%;
 
-width:100%;
+    background:white;
 
-height:50%;
+    border-radius:
+    0 0 140px 140px;
 
+    z-index:4;
 
-background:white;
-
-
-border-radius:
-0 0 130px 130px;
-
-
-z-index:2;
+    box-shadow:
+    inset 0 10px 20px #aaa;
 
 }
 
 
 
-/* BOTON CENTRAL */
+/* CENTRO */
 
+.center{
 
-.pokeball::after{
+    position:absolute;
 
+    top:50%;
 
-content:"";
+    width:100%;
 
-position:absolute;
+    height:15px;
 
+    background:black;
 
-top:105px;
-
-left:100px;
-
-
-width:60px;
-
-height:60px;
-
-
-background:white;
-
-
-border:10px solid black;
-
-
-border-radius:50%;
-
-
-z-index:5;
-
+    z-index:8;
 
 }
 
 
+
+.button{
+
+    position:absolute;
+
+    left:calc(50% - 35px);
+
+    top:-27px;
+
+    width:70px;
+
+    height:70px;
+
+    background:white;
+
+    border:12px solid black;
+
+    border-radius:50%;
+
+}
 
 
 
 /* LUZ */
 
+.energy{
 
-.poke-light{
+    position:absolute;
 
+    width:100%;
 
-position:absolute;
+    height:100%;
 
+    background:white;
 
-width:100%;
+    border-radius:50%;
 
-height:100%;
+    opacity:0;
 
-
-background:white;
-
-
-border-radius:50%;
-
-
-opacity:0;
-
-
-z-index:1;
-
+    z-index:2;
 
 }
 
 
 
+/* POKEMON */
 
+.pokemon{
 
-.open .poke-light{
+    position:absolute;
 
+    width:150px;
 
-animation:flash 1s;
+    left:65px;
 
+    bottom:80px;
 
-}
+    opacity:0;
 
+    transform:translateY(100px) scale(.5);
 
+    z-index:3;
 
-
-
-/* REGALO */
-
-
-.gift{
-
-
-position:absolute;
-
-
-top:50%;
-
-left:50%;
-
-
-transform:
-translate(-50%,0)
-scale(0);
-
-
-z-index:6;
-
-
-transition:1s;
-
-
-width:90%;
-
+    transition:1s;
 
 }
-
-
-
-
-
-.open .gift{
-
-
-transform:
-translate(-50%,-150px)
-scale(1);
-
-
-}
-
-
 
 
 
 /* CARTA */
 
 
-.message{
+.card{
+
+    position:absolute;
+
+    width:240px;
+
+    left:20px;
+
+    bottom:80px;
 
 
-background:white;
+    background:
+
+    linear-gradient(
+    135deg,
+    #fff,
+    #ffd6ef
+    );
 
 
-color:#333;
+    color:#333;
+
+    padding:20px;
+
+    border-radius:20px;
 
 
-padding:20px;
+    opacity:0;
+
+    transform:
+    translateY(100px)
+    scale(.5);
 
 
-border-radius:20px;
+    z-index:7;
 
 
-box-shadow:
-0 0 30px pink;
+    transition:1s;
 
 
-opacity:0;
+    box-shadow:
+
+    0 0 25px pink;
 
 
-transition:1s;
+}
 
+
+
+.card h2{
+
+    color:#e60012;
+
+    margin-bottom:10px;
 
 }
 
 
 
-.open .message{
+.card p{
 
-
-opacity:1;
-
+    font-size:14px;
 
 }
-
-
-
-.message h2{
-
-
-color:#e60012;
-
-
-margin-bottom:10px;
-
-
-}
-
 
 
 
@@ -334,25 +293,17 @@ margin-bottom:10px;
 
 .photos{
 
+    position:absolute;
 
-margin-top:20px;
+    width:100%;
 
+    bottom:-30px;
 
-opacity:0;
+    opacity:0;
 
+    z-index:9;
 
-transition:1s;
-
-
-}
-
-
-
-.open .photos{
-
-
-opacity:1;
-
+    transition:1s;
 
 }
 
@@ -360,38 +311,176 @@ opacity:1;
 
 .photos img{
 
+    width:70px;
 
-width:80px;
+    height:70px;
 
-height:80px;
+    object-fit:cover;
 
+    border-radius:15px;
 
-object-fit:cover;
+    border:3px solid white;
 
-
-border-radius:15px;
-
-
-margin:5px;
-
-
-border:3px solid white;
-
+    margin:5px;
 
 }
 
 
 
-/* ANIMACION APERTURA */
+/* PARTICULAS */
 
 
-.open .poke-top{
+.particles span{
+
+    position:absolute;
+
+    width:10px;
+
+    height:10px;
+
+    background:white;
+
+    border-radius:50%;
+
+    opacity:0;
+
+}
 
 
-transform:
-translateY(-120px)
-rotateX(70deg);
 
+
+.particles span:nth-child(1){
+
+left:20%;
+top:40%;
+
+}
+
+
+.particles span:nth-child(2){
+
+right:20%;
+top:30%;
+
+}
+
+
+.particles span:nth-child(3){
+
+left:40%;
+top:20%;
+
+}
+
+
+.particles span:nth-child(4){
+
+right:40%;
+top:60%;
+
+}
+
+
+
+
+/* BOTONES */
+
+
+button{
+
+    margin:20px 5px;
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+
+#openBtn{
+
+    background:#e60012;
+
+    color:white;
+
+}
+
+
+
+#resetBtn{
+
+    background:white;
+
+}
+
+
+
+/* ANIMACIÓN AL ABRIR */
+
+
+.open .top{
+
+    transform:
+    translateY(-140px)
+    rotateX(70deg);
+
+}
+
+
+
+.open .energy{
+
+    animation:flash 1s;
+
+}
+
+
+
+.open .pokemon{
+
+    opacity:1;
+
+    transform:
+    translateY(-120px)
+    scale(1);
+
+}
+
+
+
+.open .card{
+
+    opacity:1;
+
+    transform:
+    translateY(-170px)
+    scale(1);
+
+}
+
+
+
+.open .photos{
+
+    opacity:1;
+
+}
+
+
+
+.open .particles span{
+
+    opacity:1;
+
+    animation:
+    particles 2s infinite;
 
 }
 
@@ -402,25 +491,46 @@ rotateX(70deg);
 
 0%{
 
-opacity:1;
-
 transform:scale(.2);
+
+opacity:1;
 
 }
 
 
 100%{
 
+transform:scale(2);
 
 opacity:0;
 
-transform:scale(2);
-
 }
 
 
 }
 
+
+
+@keyframes particles{
+
+
+0%{
+
+transform:translateY(0);
+
+}
+
+
+100%{
+
+transform:translateY(-150px);
+
+opacity:0;
+
+}
+
+
+}
 
 
 
@@ -436,9 +546,18 @@ font-size:28px;
 
 .pokeball{
 
-width:230px;
+width:240px;
 
-height:230px;
+height:240px;
+
+}
+
+
+.card{
+
+width:210px;
+
+left:15px;
 
 }
 
