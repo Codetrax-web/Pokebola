@@ -200,19 +200,22 @@ h1{
 
     position:absolute;
 
-    width:150px;
+    width:160px;
 
-    left:65px;
+    left:calc(50% - 80px);
 
-    bottom:80px;
+    bottom:110px;
 
     opacity:0;
 
-    transform:translateY(100px) scale(.5);
+    transform:
+    translateY(80px)
+    scale(.5);
 
-    z-index:3;
 
-    transition:1s;
+    z-index:6;
+
+    transition:1.2s;
 
 }
 
@@ -408,7 +411,7 @@ button{
     opacity:1;
 
     transform:
-    translateY(-120px)
+    translateY(-180px)
     scale(1);
 
 }
