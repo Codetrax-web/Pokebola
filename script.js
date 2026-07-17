@@ -1,43 +1,21 @@
-const poke = document.getElementById("pokeball");
+const pokeball = document.getElementById("pokeball");
 
-const message =
-document.getElementById("message");
 
-const photos =
-document.getElementById("photos");
-
-const text =
-document.getElementById("text");
+let abierta = false;
 
 
 
-poke.addEventListener("click",()=>{
+pokeball.addEventListener("click",()=>{
 
 
-poke.classList.add("open");
+if(abierta) return;
 
 
-text.innerHTML="✨ La Pokébola se abrió ✨";
-
-
-
-setTimeout(()=>{
-
-
-message.style.display="block";
-
-
-},1200);
+abierta=true;
 
 
 
-setTimeout(()=>{
-
-
-photos.style.display="block";
-
-
-},2500);
+pokeball.classList.add("open");
 
 
 
