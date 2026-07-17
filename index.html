@@ -16,6 +16,19 @@
 <body>
 
 
+<!-- Música de fondo -->
+<audio id="music" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- Sonido de apertura -->
+<audio id="openSound">
+    <source src="sonido.mp3" type="audio/mpeg">
+</audio>
+
+
+
 <div class="container">
 
 
@@ -24,71 +37,111 @@
 </h1>
 
 
-<p class="instruction">
-🔴 Toca la Pokébola 🔴
+<p class="subtitle">
+Una sorpresa está esperando...
 </p>
 
 
 
+<!-- Zona de Pokébola -->
+
 <div class="pokeball" id="pokeball">
 
 
-    <div class="poke-top"></div>
+    <!-- Partículas -->
 
+    <div class="particles">
 
-    <div class="poke-light"></div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
 
-
-
-    <div class="gift">
-
-
-        <div class="message">
-
-            <h2>
-            💖 Para ti 💖
-            </h2>
-
-
-            <p>
-
-            Así como un entrenador
-            busca su Pokémon favorito,
-            yo encontré a alguien
-            único y especial.
-
-            <br><br>
-
-            Gracias por cada momento juntos.
-
-            ❤️ Te quiero mucho ❤️
-
-            </p>
-
-
-        </div>
+    </div>
 
 
 
-        <div class="photos">
+    <!-- Luz interior -->
+
+    <div class="energy"></div>
 
 
-            <img src="img/foto1.jpg">
 
-            <img src="img/foto2.jpg">
+    <!-- Pokémon -->
 
-            <img src="img/foto3.jpg">
+    <img 
+    class="pokemon"
+    src="img/pokemon.png"
+    alt="Pokemon">
 
 
-        </div>
 
+    <!-- Carta -->
+
+    <div class="card">
+
+
+        <h2>
+        💖 Para ti 💖
+        </h2>
+
+
+        <p>
+
+        Desde que llegaste a mi vida
+        encontré algo especial.
+
+        <br><br>
+
+        Como un entrenador encuentra
+        su Pokémon favorito,
+        yo encontré a alguien único.
+
+        <br><br>
+
+        Gracias por todos los momentos.
+
+        ❤️ Te quiero mucho ❤️
+
+        </p>
 
 
     </div>
 
 
 
-    <div class="poke-bottom"></div>
+    <!-- Fotos -->
+
+
+    <div class="photos">
+
+
+        <img src="img/foto1.jpg">
+
+        <img src="img/foto2.jpg">
+
+        <img src="img/foto3.jpg">
+
+
+    </div>
+
+
+
+
+    <!-- Partes de la Pokébola -->
+
+    <div class="top"></div>
+
+
+    <div class="center">
+
+        <div class="button"></div>
+
+    </div>
+
+
+
+    <div class="bottom"></div>
 
 
 
@@ -96,7 +149,24 @@
 
 
 
+<button id="openBtn">
+
+🔴 Abrir regalo
+
+</button>
+
+
+
+<button id="resetBtn">
+
+🔄 Reiniciar
+
+</button>
+
+
+
 </div>
+
 
 
 
