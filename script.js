@@ -7,7 +7,7 @@ const openBtn = document.getElementById("openBtn");
 const resetBtn = document.getElementById("resetBtn");
 
 
-const music = document.getElementById("music");
+const music = document.getElementById("pokemor");
 
 const openSound = document.getElementById("openSound");
 
