@@ -23,44 +23,43 @@ let abierto = false;
 
 function abrirPokebola(){
 
-
     if(abierto) return;
-
 
     abierto = true;
 
 
-    // activar animación CSS
-
-    pokeball.classList.add("open");
-
+    // La Pokébola tiembla primero
+    pokeball.classList.add("shaking");
 
 
-    // sonido de apertura
+    // Después de 1.5 segundos se detiene el temblor y se abre
+    setTimeout(() => {
 
-    openSound.currentTime = 0;
+        pokeball.classList.remove("shaking");
 
-    openSound.play()
-    .catch(()=>{
-
-        console.log("El navegador bloqueó el sonido");
-
-    });
+        pokeball.classList.add("open");
 
 
+        // Sonido de apertura
+        openSound.currentTime = 0;
 
-    // música
+        openSound.play().catch(() => {
 
-    music.volume = 0.4;
+            console.log("El navegador bloqueó el sonido");
 
-    music.play()
-    .catch(()=>{
-
-        console.log("La música necesita interacción");
-
-    });
+        });
 
 
+        // Música
+        music.volume = 0.4;
+
+        music.play().catch(() => {
+
+            console.log("La música necesita interacción");
+
+        });
+
+    }, 1500);
 
 }
 
